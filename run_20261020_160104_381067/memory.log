@@ -1,0 +1,3720 @@
+
+===== 2026-10-20T16:01:07.168+08:00 scheduled=0s actual=0.003s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          424176 kB
+MemAvailable:    2368580 kB
+Buffers:            1004 kB
+Cached:          2845088 kB
+SwapCached:        17348 kB
+Active:          2038104 kB
+Inactive:        1694512 kB
+Active(anon):    1102568 kB
+Inactive(anon):   293152 kB
+Active(file):     935536 kB
+Inactive(file):  1401360 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:         839328 kB
+Dirty:               336 kB
+Writeback:             0 kB
+AnonPages:       1317080 kB
+Mapped:          1655508 kB
+Shmem:            213748 kB
+KReclaimable:     242240 kB
+Slab:             671716 kB
+SReclaimable:     180864 kB
+SUnreclaim:       490852 kB
+KernelStack:      132144 kB
+ShadowCallStack:   33120 kB
+PageTables:       266564 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   517135468 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      278968 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:               0 kB
+Gpu:              339224 kB
+ION_heap_pool:     61376 kB
+ION_heap:         657644 kB
+Zram:             631640 kB
+Misc:             117544 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435073486 Realtime: 1030358194
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   117261   116168     1088    12123   119036   167156   155253     7593
+  Dalvik Heap     9941     9640      140       73    13904   262144     8066   254078
+ Dalvik Other     1930     1432      328       64     2780                           
+        Stack     1712     1612      100      280     1716                           
+       Ashmem       18        0        0        0      988                           
+    Other dev       24        0       24        0      392                           
+     .so mmap    26009      128    15196      280    76624                           
+    .jar mmap      772        0        0        0    40824                           
+    .apk mmap      365        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      235        0        0        0    13188                           
+    .art mmap      910      232      336       31    19880                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   110832   110832        0        0   110832                           
+      Unknown     1040      392      616      110     1796                           
+        TOTAL   358810   305016    27384    12961   481428   429300   163319   261671
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:    10208                          33784
+         Native Heap:   116168                         119036
+                Code:    15544                         134016
+               Stack:     1612                           1716
+            Graphics:   175408                         175408
+       Private Other:    13460
+              System:    26410
+             Unknown:                                   17468
+ 
+           TOTAL PSS:   358810            TOTAL RSS:   481428       TOTAL SWAP PSS:    12961
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       64        Proxy Binders:      100
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1894                            179
+ Other (nonmalloced):      240                            145
+   Bitmap (malloced):       76                           9726
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:01:15.820+08:00 scheduled=10s actual=10.004s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          217140 kB
+MemAvailable:    2003104 kB
+Buffers:             996 kB
+Cached:          2692900 kB
+SwapCached:        17412 kB
+Active:          2675264 kB
+Inactive:        1570868 kB
+Active(anon):    1713476 kB
+Inactive(anon):   340428 kB
+Active(file):     961788 kB
+Inactive(file):  1230440 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1552688 kB
+Dirty:              1660 kB
+Writeback:             0 kB
+AnonPages:       1986584 kB
+Mapped:          1806320 kB
+Shmem:            213832 kB
+KReclaimable:     214692 kB
+Slab:             662596 kB
+SReclaimable:     172092 kB
+SUnreclaim:       490504 kB
+KernelStack:      128924 kB
+ShadowCallStack:   32332 kB
+PageTables:       260544 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   502716544 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      274964 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:             212 kB
+Gpu:              320020 kB
+ION_heap_pool:     42600 kB
+ION_heap:         648772 kB
+Zram:             395580 kB
+Misc:             113120 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435083382 Realtime: 1030368089
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   114973   113876     1092    12120   116748   167156   151639    11207
+  Dalvik Heap    10381     7640     2576       13    14344   262144     7833   254311
+ Dalvik Other     1782     1336      276       64     2632                           
+        Stack     1712     1616       96      280     1716                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26046      132    15196      278    76628                           
+    .jar mmap      788        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      249        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   110832   110832        0        0   110832                           
+      Unknown     1044      404      608      106     1800                           
+        TOTAL   357907   300828    30668    12882   480544   429300   159472   265518
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9312                          35356
+         Native Heap:   113876                         116748
+                Code:    15548                         134008
+               Stack:     1616                           1716
+            Graphics:   175408                         175408
+       Private Other:    15736
+              System:    26411
+             Unknown:                                   17308
+ 
+           TOTAL PSS:   357907            TOTAL RSS:   480544       TOTAL SWAP PSS:    12882
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       59        Proxy Binders:       98
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      181                            116
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:01:25.747+08:00 scheduled=20s actual=20.005s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          627164 kB
+MemAvailable:    2313548 kB
+Buffers:             996 kB
+Cached:          2597784 kB
+SwapCached:        17628 kB
+Active:          2192044 kB
+Inactive:        1499040 kB
+Active(anon):    1279992 kB
+Inactive(anon):   318732 kB
+Active(file):     912052 kB
+Inactive(file):  1180308 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1100472 kB
+Dirty:              1852 kB
+Writeback:             0 kB
+AnonPages:       1525768 kB
+Mapped:          1710592 kB
+Shmem:            213400 kB
+KReclaimable:     215268 kB
+Slab:             663240 kB
+SReclaimable:     172668 kB
+SUnreclaim:       490572 kB
+KernelStack:      128796 kB
+ShadowCallStack:   32260 kB
+PageTables:       260552 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   503496168 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      274808 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:            2708 kB
+Gpu:              320020 kB
+ION_heap_pool:     42600 kB
+ION_heap:         648772 kB
+Zram:             539936 kB
+Misc:             113292 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435093463 Realtime: 1030378171
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   114693   113596     1092    12116   116468   156736   140449    11993
+  Dalvik Heap     9781     7040     2576       13    13744   262144     7705   254439
+ Dalvik Other     1778     1332      276       64     2628                           
+        Stack     1724     1628       96      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26047      132    15196      278    76628                           
+    .jar mmap      788        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      249        0        0        0    13188                           
+    .art mmap     2025      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack    60844    60844        0        0    60844                           
+      Unknown     1044      412      600      106     1800                           
+        TOTAL   307043   249976    30660    12878   429684   418880   148154   266432
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     8712                          34756
+         Native Heap:   113596                         116468
+                Code:    15548                         134008
+               Stack:     1628                           1728
+            Graphics:   125420                         125420
+       Private Other:    15732
+              System:    26407
+             Unknown:                                   17304
+ 
+           TOTAL PSS:   307043            TOTAL RSS:   429684       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       59        Proxy Binders:      100
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      181                            116
+   Bitmap (malloced):       74                           9695
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:01:35.815+08:00 scheduled=30s actual=30.010s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          661008 kB
+MemAvailable:    2329812 kB
+Buffers:             996 kB
+Cached:          2578460 kB
+SwapCached:        17576 kB
+Active:          2165288 kB
+Inactive:        1487736 kB
+Active(anon):    1270544 kB
+Inactive(anon):   307884 kB
+Active(file):     894744 kB
+Inactive(file):  1179852 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1099500 kB
+Dirty:               712 kB
+Writeback:             0 kB
+AnonPages:       1507060 kB
+Mapped:          1669404 kB
+Shmem:            213400 kB
+KReclaimable:     215636 kB
+Slab:             663656 kB
+SReclaimable:     173036 kB
+SUnreclaim:       490620 kB
+KernelStack:      128880 kB
+ShadowCallStack:   32264 kB
+PageTables:       260712 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   503491588 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      274612 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:           19512 kB
+Gpu:              320020 kB
+ION_heap_pool:     42600 kB
+ION_heap:         648772 kB
+Zram:             543728 kB
+Misc:             113336 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435103463 Realtime: 1030388171
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   114061   112964     1092    12116   115836   158220   142537    11373
+  Dalvik Heap    11161     8420     2576       13    15124   262144     7925   254219
+ Dalvik Other     1782     1336      276       64     2632                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26047      132    15196      278    76628                           
+    .jar mmap      788        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      249        0        0        0    13188                           
+    .art mmap     2025      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack    60848    60848        0        0    60848                           
+      Unknown     1044      404      608      106     1800                           
+        TOTAL   307799   250728    30664    12878   430440   420364   150462   265592
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:    10092                          36136
+         Native Heap:   112964                         115836
+                Code:    15548                         134008
+               Stack:     1632                           1728
+            Graphics:   125424                         125424
+       Private Other:    15732
+              System:    26407
+             Unknown:                                   17308
+ 
+           TOTAL PSS:   307799            TOTAL RSS:   430440       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       55        Proxy Binders:      100
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      177                            114
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:01:45.646+08:00 scheduled=40s actual=40.001s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          623224 kB
+MemAvailable:    2309916 kB
+Buffers:             996 kB
+Cached:          2596172 kB
+SwapCached:        17560 kB
+Active:          2211416 kB
+Inactive:        1479468 kB
+Active(anon):    1299400 kB
+Inactive(anon):   299120 kB
+Active(file):     912016 kB
+Inactive(file):  1180348 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1123820 kB
+Dirty:               864 kB
+Writeback:             0 kB
+AnonPages:       1527724 kB
+Mapped:          1684128 kB
+Shmem:            213736 kB
+KReclaimable:     215876 kB
+Slab:             663984 kB
+SReclaimable:     173276 kB
+SUnreclaim:       490708 kB
+KernelStack:      128708 kB
+ShadowCallStack:   32228 kB
+PageTables:       260168 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   503498092 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      274748 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:             144 kB
+Gpu:              321444 kB
+ION_heap_pool:     42600 kB
+ION_heap:         648772 kB
+Zram:             542408 kB
+Misc:             113236 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435113380 Realtime: 1030398088
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   113941   112844     1092    12116   115716   157384   141551    11539
+  Dalvik Heap    10117     7376     2576       13    14080   262144     7797   254347
+ Dalvik Other     1782     1336      276       64     2632                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26046      132    15196      278    76628                           
+    .jar mmap      788        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      249        0        0        0    13188                           
+    .art mmap     2025      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   114012   114012        0        0   114012                           
+      Unknown     1044      412      600      106     1800                           
+        TOTAL   359798   302736    30656    12878   482440   419528   149348   265886
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9048                          35092
+         Native Heap:   112844                         115716
+                Code:    15548                         134008
+               Stack:     1632                           1728
+            Graphics:   178588                         178588
+       Private Other:    15732
+              System:    26406
+             Unknown:                                   17308
+ 
+           TOTAL PSS:   359798            TOTAL RSS:   482440       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:       98
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:01:55.801+08:00 scheduled=50s actual=50.002s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          662624 kB
+MemAvailable:    2331044 kB
+Buffers:             996 kB
+Cached:          2578088 kB
+SwapCached:        17612 kB
+Active:          2174060 kB
+Inactive:        1476704 kB
+Active(anon):    1279660 kB
+Inactive(anon):   297028 kB
+Active(file):     894400 kB
+Inactive(file):  1179676 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1100480 kB
+Dirty:               148 kB
+Writeback:             0 kB
+AnonPages:       1505008 kB
+Mapped:          1666492 kB
+Shmem:            213292 kB
+KReclaimable:     215912 kB
+Slab:             663984 kB
+SReclaimable:     173312 kB
+SUnreclaim:       490672 kB
+KernelStack:      128796 kB
+ShadowCallStack:   32236 kB
+PageTables:       259804 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   503491964 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      274724 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:             336 kB
+Gpu:              321444 kB
+ION_heap_pool:     42600 kB
+ION_heap:         648772 kB
+Zram:             543468 kB
+Misc:             113284 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435123462 Realtime: 1030408169
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   115565   114468     1092    12116   117340   158868   143264    11294
+  Dalvik Heap    10865     8124     2576       13    14828   262144     7857   254287
+ Dalvik Other     1782     1336      276       64     2632                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26045      132    15196      278    76628                           
+    .jar mmap      788        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      249        0        0        0    13188                           
+    .art mmap     2025      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   114012   114012        0        0   114012                           
+      Unknown     1044      412      600      106     1800                           
+        TOTAL   362169   305108    30656    12878   484812   421012   151121   265581
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9796                          35840
+         Native Heap:   114468                         117340
+                Code:    15548                         134008
+               Stack:     1632                           1728
+            Graphics:   178588                         178588
+       Private Other:    15732
+              System:    26405
+             Unknown:                                   17308
+ 
+           TOTAL PSS:   362169            TOTAL RSS:   484812       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:       98
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:02:05.771+08:00 scheduled=60s actual=60.006s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          627808 kB
+MemAvailable:    2300456 kB
+Buffers:             996 kB
+Cached:          2582668 kB
+SwapCached:        17572 kB
+Active:          2208220 kB
+Inactive:        1477332 kB
+Active(anon):    1310236 kB
+Inactive(anon):   297020 kB
+Active(file):     897984 kB
+Inactive(file):  1180312 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1128640 kB
+Dirty:               304 kB
+Writeback:             0 kB
+AnonPages:       1535936 kB
+Mapped:          1670212 kB
+Shmem:            214188 kB
+KReclaimable:     215928 kB
+Slab:             663956 kB
+SReclaimable:     173328 kB
+SUnreclaim:       490628 kB
+KernelStack:      128684 kB
+ShadowCallStack:   32224 kB
+PageTables:       260220 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   503492560 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      274696 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:               0 kB
+Gpu:              321444 kB
+ION_heap_pool:     42600 kB
+ION_heap:         648772 kB
+Zram:             541900 kB
+Misc:             114520 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435133409 Realtime: 1030418117
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   115457   114360     1092    12116   117232   158868   142899    11659
+  Dalvik Heap    10149     7408     2576       13    14112   262144     7889   254255
+ Dalvik Other     1782     1336      276       64     2632                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26047      132    15196      278    76628                           
+    .jar mmap      788        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      249        0        0        0    13188                           
+    .art mmap     2025      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   114012   114012        0        0   114012                           
+      Unknown     1044      412      600      106     1800                           
+        TOTAL   361347   304284    30656    12878   483988   421012   150788   265914
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9080                          35124
+         Native Heap:   114360                         117232
+                Code:    15548                         134008
+               Stack:     1632                           1728
+            Graphics:   178588                         178588
+       Private Other:    15732
+              System:    26407
+             Unknown:                                   17308
+ 
+           TOTAL PSS:   361347            TOTAL RSS:   483988       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:       98
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1021                             96
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:02:15.838+08:00 scheduled=70s actual=70.004s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          775448 kB
+MemAvailable:    2440744 kB
+Buffers:             996 kB
+Cached:          2573176 kB
+SwapCached:        17588 kB
+Active:          2041436 kB
+Inactive:        1477288 kB
+Active(anon):    1151940 kB
+Inactive(anon):   296916 kB
+Active(file):     889496 kB
+Inactive(file):  1180372 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1065944 kB
+Dirty:               584 kB
+Writeback:             0 kB
+AnonPages:       1377744 kB
+Mapped:          1623584 kB
+Shmem:            213092 kB
+KReclaimable:     218076 kB
+Slab:             664532 kB
+SReclaimable:     173760 kB
+SUnreclaim:       490772 kB
+KernelStack:      128688 kB
+ShadowCallStack:   32236 kB
+PageTables:       259604 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   503371040 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      274528 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:           31256 kB
+Gpu:              321444 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             562156 kB
+Misc:             113660 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435143458 Realtime: 1030428166
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   115649   114552     1092    12116   117424   158868   143247    11311
+  Dalvik Heap    11066     8324     2576       13    15028   262144     7953   254191
+ Dalvik Other     1782     1336      276       64     2632                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26049      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   114012   114012        0        0   114012                           
+      Unknown     1044      404      608      106     1800                           
+        TOTAL   362463   305384    30664    12878   485096   421012   151200   265502
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9996                          36040
+         Native Heap:   114552                         117424
+                Code:    15548                         134008
+               Stack:     1632                           1728
+            Graphics:   178588                         178588
+       Private Other:    15732
+              System:    26415
+             Unknown:                                   17308
+ 
+           TOTAL PSS:   362463            TOTAL RSS:   485096       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:      100
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:02:25.767+08:00 scheduled=80s actual=80.006s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          738932 kB
+MemAvailable:    2428544 kB
+Buffers:             996 kB
+Cached:          2597448 kB
+SwapCached:        17600 kB
+Active:          2103784 kB
+Inactive:        1458276 kB
+Active(anon):    1190552 kB
+Inactive(anon):   277316 kB
+Active(file):     913232 kB
+Inactive(file):  1180960 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1116364 kB
+Dirty:               780 kB
+Writeback:             0 kB
+AnonPages:       1397284 kB
+Mapped:          1633672 kB
+Shmem:            213544 kB
+KReclaimable:     218060 kB
+Slab:             664312 kB
+SReclaimable:     173744 kB
+SUnreclaim:       490568 kB
+KernelStack:      127588 kB
+ShadowCallStack:   31916 kB
+PageTables:       258124 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500086900 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      273096 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:            5264 kB
+Gpu:              321960 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             557224 kB
+Misc:             114388 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435153411 Realtime: 1030438119
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   115665   114568     1092    12116   117440   168512   152392    11810
+  Dalvik Heap    10430     7688     2576       13    14392   262144     7793   254351
+ Dalvik Other     1782     1336      276       64     2632                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26047      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   114528   114528        0        0   114528                           
+      Unknown     1044      404      608      106     1800                           
+        TOTAL   362357   305280    30664    12878   484992   430656   160185   266161
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9360                          35404
+         Native Heap:   114568                         117440
+                Code:    15548                         134008
+               Stack:     1632                           1728
+            Graphics:   179104                         179104
+       Private Other:    15732
+              System:    26413
+             Unknown:                                   17308
+ 
+           TOTAL PSS:   362357            TOTAL RSS:   484992       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:       98
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1021                             96
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:02:35.870+08:00 scheduled=90s actual=90.002s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          822548 kB
+MemAvailable:    2485696 kB
+Buffers:             996 kB
+Cached:          2571384 kB
+SwapCached:        17604 kB
+Active:          2015144 kB
+Inactive:        1458008 kB
+Active(anon):    1128156 kB
+Inactive(anon):   277308 kB
+Active(file):     886988 kB
+Inactive(file):  1180700 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1052308 kB
+Dirty:               824 kB
+Writeback:             0 kB
+AnonPages:       1334628 kB
+Mapped:          1606720 kB
+Shmem:            213656 kB
+KReclaimable:     218140 kB
+Slab:             664496 kB
+SReclaimable:     173824 kB
+SUnreclaim:       490672 kB
+KernelStack:      127356 kB
+ShadowCallStack:   31872 kB
+PageTables:       258104 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500077088 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      272812 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:           47152 kB
+Gpu:              321960 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             561984 kB
+Misc:             115040 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435163476 Realtime: 1030448184
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   115709   114612     1092    12116   117484   159320   143697    11313
+  Dalvik Heap    11018     8276     2576       13    14980   262144     7729   254415
+ Dalvik Other     1782     1336      276       64     2632                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26048      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   114528   114528        0        0   114528                           
+      Unknown     1044      404      608      106     1800                           
+        TOTAL   362990   305912    30664    12878   485624   421464   151426   265728
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9948                          35992
+         Native Heap:   114612                         117484
+                Code:    15548                         134008
+               Stack:     1632                           1728
+            Graphics:   179104                         179104
+       Private Other:    15732
+              System:    26414
+             Unknown:                                   17308
+ 
+           TOTAL PSS:   362990            TOTAL RSS:   485624       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:       98
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1021                             96
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       73                           9680
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:02:45.801+08:00 scheduled=100s actual=100.004s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          759656 kB
+MemAvailable:    2441700 kB
+Buffers:             996 kB
+Cached:          2589528 kB
+SwapCached:        17604 kB
+Active:          2080396 kB
+Inactive:        1458280 kB
+Active(anon):    1174832 kB
+Inactive(anon):   277308 kB
+Active(file):     905564 kB
+Inactive(file):  1180972 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1101036 kB
+Dirty:               784 kB
+Writeback:             0 kB
+AnonPages:       1381896 kB
+Mapped:          1624640 kB
+Shmem:            213208 kB
+KReclaimable:     218236 kB
+Slab:             664596 kB
+SReclaimable:     173920 kB
+SUnreclaim:       490676 kB
+KernelStack:      127344 kB
+ShadowCallStack:   31872 kB
+PageTables:       258112 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500077760 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      272712 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:            3000 kB
+Gpu:              321960 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             560556 kB
+Misc:             113828 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435173427 Realtime: 1030458135
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   115717   114620     1092    12116   117492   159320   143683    11327
+  Dalvik Heap    11126     8384     2576       13    15088   262144     7793   254351
+ Dalvik Other     1782     1336      276       64     2632                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26049      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack    84300    84300        0        0    84300                           
+      Unknown     1044      396      616      106     1800                           
+        TOTAL   332879   275792    30672    12878   455512   421464   151476   265678
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:    10056                          36100
+         Native Heap:   114620                         117492
+                Code:    15548                         134008
+               Stack:     1632                           1728
+            Graphics:   148876                         148876
+       Private Other:    15732
+              System:    26415
+             Unknown:                                   17308
+ 
+           TOTAL PSS:   332879            TOTAL RSS:   455512       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:       98
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:02:55.840+08:00 scheduled=110s actual=110.006s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          821236 kB
+MemAvailable:    2484332 kB
+Buffers:             996 kB
+Cached:          2571044 kB
+SwapCached:        17624 kB
+Active:          2016340 kB
+Inactive:        1458152 kB
+Active(anon):    1129604 kB
+Inactive(anon):   277332 kB
+Active(file):     886736 kB
+Inactive(file):  1180820 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1055108 kB
+Dirty:               304 kB
+Writeback:             0 kB
+AnonPages:       1336440 kB
+Mapped:          1606116 kB
+Shmem:            213544 kB
+KReclaimable:     218300 kB
+Slab:             664736 kB
+SReclaimable:     173984 kB
+SUnreclaim:       490752 kB
+KernelStack:      127360 kB
+ShadowCallStack:   31888 kB
+PageTables:       258236 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500076520 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      272804 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:           33760 kB
+Gpu:              321960 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             563104 kB
+Misc:             113528 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435183450 Realtime: 1030468157
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   115653   114556     1092    12116   117428   158592   142473    11817
+  Dalvik Heap    10398     7656     2576       13    14360   262144     7793   254351
+ Dalvik Other     1782     1336      276       64     2632                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26049      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   112448   112448        0        0   112448                           
+      Unknown     1044      396      616      106     1800                           
+        TOTAL   360235   303148    30672    12878   482868   420736   150266   266168
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9328                          35372
+         Native Heap:   114556                         117428
+                Code:    15548                         134008
+               Stack:     1632                           1728
+            Graphics:   177024                         177024
+       Private Other:    15732
+              System:    26415
+             Unknown:                                   17308
+ 
+           TOTAL PSS:   360235            TOTAL RSS:   482868       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:       98
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:03:05.824+08:00 scheduled=120s actual=120.005s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          783760 kB
+MemAvailable:    2455888 kB
+Buffers:             996 kB
+Cached:          2579416 kB
+SwapCached:        17596 kB
+Active:          2056100 kB
+Inactive:        1458792 kB
+Active(anon):    1161012 kB
+Inactive(anon):   277324 kB
+Active(file):     895088 kB
+Inactive(file):  1181468 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1087364 kB
+Dirty:                72 kB
+Writeback:             0 kB
+AnonPages:       1368036 kB
+Mapped:          1613492 kB
+Shmem:            213540 kB
+KReclaimable:     218364 kB
+Slab:             664880 kB
+SReclaimable:     174048 kB
+SUnreclaim:       490832 kB
+KernelStack:      127280 kB
+ShadowCallStack:   31868 kB
+PageTables:       257716 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500076800 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      272760 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:            4520 kB
+Gpu:              321960 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             561564 kB
+Misc:             112564 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435193438 Realtime: 1030478146
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   115665   114568     1092    12116   117440   159772   144145    11317
+  Dalvik Heap    11178     8436     2576       13    15140   262144     7857   254287
+ Dalvik Other     1786     1344      272       64     2636                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26047      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   112448   112448        0        0   112448                           
+      Unknown     1044      396      616      106     1800                           
+        TOTAL   361029   303948    30668    12878   483664   421916   152002   265604
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:    10108                          36152
+         Native Heap:   114568                         117440
+                Code:    15548                         134008
+               Stack:     1632                           1728
+            Graphics:   177024                         177024
+       Private Other:    15736
+              System:    26413
+             Unknown:                                   17312
+ 
+           TOTAL PSS:   361029            TOTAL RSS:   483664       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:       98
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:03:15.857+08:00 scheduled=130s actual=130.005s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          830848 kB
+MemAvailable:    2495600 kB
+Buffers:             996 kB
+Cached:          2571380 kB
+SwapCached:        17612 kB
+Active:          2006344 kB
+Inactive:        1459044 kB
+Active(anon):    1118920 kB
+Inactive(anon):   277312 kB
+Active(file):     887424 kB
+Inactive(file):  1181732 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1053876 kB
+Dirty:                92 kB
+Writeback:             0 kB
+AnonPages:       1326216 kB
+Mapped:          1605752 kB
+Shmem:            213104 kB
+KReclaimable:     218412 kB
+Slab:             664632 kB
+SReclaimable:     174096 kB
+SUnreclaim:       490536 kB
+KernelStack:      127388 kB
+ShadowCallStack:   31868 kB
+PageTables:       258012 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500085372 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      272712 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:           41304 kB
+Gpu:              321960 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             562796 kB
+Misc:             113748 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435203463 Realtime: 1030488171
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   114701   113604     1092    12116   116476   168964   153341    11313
+  Dalvik Heap    10138     7396     2576       13    14100   262144     7697   254447
+ Dalvik Other     1790     1348      268       64     2644                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26049      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   112448   112448        0        0   112448                           
+      Unknown     1044      404      608      106     1800                           
+        TOTAL   359031   301956    30656    12878   481668   431108   161038   265760
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9068                          35112
+         Native Heap:   113604                         116476
+                Code:    15548                         134016
+               Stack:     1632                           1728
+            Graphics:   177024                         177024
+       Private Other:    15736
+              System:    26419
+             Unknown:                                   17312
+ 
+           TOTAL PSS:   359031            TOTAL RSS:   481668       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:       98
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:03:25.830+08:00 scheduled=140s actual=140.004s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          771484 kB
+MemAvailable:    2453124 kB
+Buffers:             996 kB
+Cached:          2588044 kB
+SwapCached:        17584 kB
+Active:          2065904 kB
+Inactive:        1459556 kB
+Active(anon):    1162152 kB
+Inactive(anon):   277304 kB
+Active(file):     903752 kB
+Inactive(file):  1182252 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1093812 kB
+Dirty:               224 kB
+Writeback:             0 kB
+AnonPages:       1370056 kB
+Mapped:          1622320 kB
+Shmem:            213324 kB
+KReclaimable:     218492 kB
+Slab:             664828 kB
+SReclaimable:     174176 kB
+SUnreclaim:       490652 kB
+KernelStack:      127340 kB
+ShadowCallStack:   31872 kB
+PageTables:       258344 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500086164 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      272752 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:              88 kB
+Gpu:              321960 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             561712 kB
+Misc:             113556 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435213404 Realtime: 1030498112
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   114709   113612     1092    12116   116484   168964   153365    11289
+  Dalvik Heap    10098     7356     2576       13    14060   262144     7793   254351
+ Dalvik Other     1782     1340      268       64     2636                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26049      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   112448   112448        0        0   112448                           
+      Unknown     1044      404      608      106     1800                           
+        TOTAL   358991   301916    30656    12878   481628   431108   161158   265640
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9028                          35072
+         Native Heap:   113612                         116484
+                Code:    15548                         134016
+               Stack:     1632                           1728
+            Graphics:   177024                         177024
+       Private Other:    15728
+              System:    26419
+             Unknown:                                   17304
+ 
+           TOTAL PSS:   358991            TOTAL RSS:   481628       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:       98
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:03:36.782+08:00 scheduled=150s actual=150.005s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          798464 kB
+MemAvailable:    2471960 kB
+Buffers:             996 kB
+Cached:          2580392 kB
+SwapCached:        17600 kB
+Active:          2040928 kB
+Inactive:        1459568 kB
+Active(anon):    1145308 kB
+Inactive(anon):   277312 kB
+Active(file):     895620 kB
+Inactive(file):  1182256 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1067028 kB
+Dirty:               136 kB
+Writeback:             0 kB
+AnonPages:       1352680 kB
+Mapped:          1614152 kB
+Shmem:            213772 kB
+KReclaimable:     218460 kB
+Slab:             664756 kB
+SReclaimable:     174144 kB
+SUnreclaim:       490612 kB
+KernelStack:      127232 kB
+ShadowCallStack:   31856 kB
+PageTables:       257936 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500090048 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      272644 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:           18204 kB
+Gpu:              321960 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             561984 kB
+Misc:             111856 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435223454 Realtime: 1030508162
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   114705   113608     1092    12116   116480   168964   153368    11286
+  Dalvik Heap    10210     7468     2576       13    14172   262144     7921   254223
+ Dalvik Other     1782     1340      268       64     2636                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26049      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   110884   110884        0        0   110884                           
+      Unknown     1044      404      608      106     1800                           
+        TOTAL   357535   300460    30656    12878   480172   431108   161289   265509
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9140                          35184
+         Native Heap:   113608                         116480
+                Code:    15548                         134016
+               Stack:     1632                           1728
+            Graphics:   175460                         175460
+       Private Other:    15728
+              System:    26419
+             Unknown:                                   17304
+ 
+           TOTAL PSS:   357535            TOTAL RSS:   480172       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:      100
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1021                             96
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       73                           9680
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:03:46.737+08:00 scheduled=160s actual=160.005s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          774444 kB
+MemAvailable:    2452164 kB
+Buffers:             996 kB
+Cached:          2584052 kB
+SwapCached:        17584 kB
+Active:          2066200 kB
+Inactive:        1459568 kB
+Active(anon):    1166732 kB
+Inactive(anon):   276960 kB
+Active(file):     899468 kB
+Inactive(file):  1182608 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1087764 kB
+Dirty:               344 kB
+Writeback:             0 kB
+AnonPages:       1374704 kB
+Mapped:          1617160 kB
+Shmem:            213552 kB
+KReclaimable:     218508 kB
+Slab:             664784 kB
+SReclaimable:     174192 kB
+SUnreclaim:       490592 kB
+KernelStack:      127340 kB
+ShadowCallStack:   31856 kB
+PageTables:       258004 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500087616 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      272672 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:             248 kB
+Gpu:              321960 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             561660 kB
+Misc:             110804 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435233448 Realtime: 1030518155
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   114705   113608     1092    12116   116480   168964   153365    11289
+  Dalvik Heap    10070     7328     2576       13    14032   262144     7793   254351
+ Dalvik Other     1778     1336      268       64     2632                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26048      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   110884   110884        0        0   110884                           
+      Unknown     1044      404      608      106     1800                           
+        TOTAL   357390   300316    30656    12878   480028   431108   161158   265640
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9000                          35044
+         Native Heap:   113608                         116480
+                Code:    15548                         134016
+               Stack:     1632                           1728
+            Graphics:   175460                         175460
+       Private Other:    15724
+              System:    26418
+             Unknown:                                   17300
+ 
+           TOTAL PSS:   357390            TOTAL RSS:   480028       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:       98
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:03:56.899+08:00 scheduled=170s actual=170.006s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          811788 kB
+MemAvailable:    2478892 kB
+Buffers:             996 kB
+Cached:          2573680 kB
+SwapCached:        17600 kB
+Active:          2022480 kB
+Inactive:        1459624 kB
+Active(anon):    1133688 kB
+Inactive(anon):   276972 kB
+Active(file):     888792 kB
+Inactive(file):  1182652 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1064580 kB
+Dirty:               384 kB
+Writeback:             0 kB
+AnonPages:       1340968 kB
+Mapped:          1606532 kB
+Shmem:            213660 kB
+KReclaimable:     218540 kB
+Slab:             664852 kB
+SReclaimable:     174224 kB
+SUnreclaim:       490628 kB
+KernelStack:      127340 kB
+ShadowCallStack:   31904 kB
+PageTables:       258256 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500074712 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      272604 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:           32464 kB
+Gpu:              325020 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             562312 kB
+Misc:             113160 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435243578 Realtime: 1030528286
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   114557   113460     1092    12116   116332   158288   142643    11361
+  Dalvik Heap    10802     8060     2576       13    14764   262144     7793   254351
+ Dalvik Other     1786     1344      268       64     2640                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26048      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack    56936    56936        0        0    56936                           
+      Unknown     1044      412      600      106     1800                           
+        TOTAL   304034   246968    30648    12878   426672   420432   150436   265712
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9732                          35776
+         Native Heap:   113460                         116332
+                Code:    15548                         134016
+               Stack:     1632                           1728
+            Graphics:   121512                         121512
+       Private Other:    15732
+              System:    26418
+             Unknown:                                   17308
+ 
+           TOTAL PSS:   304034            TOTAL RSS:   426672       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:      100
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:04:06.743+08:00 scheduled=180s actual=180.004s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          775680 kB
+MemAvailable:    2453740 kB
+Buffers:             996 kB
+Cached:          2584436 kB
+SwapCached:        17572 kB
+Active:          2060708 kB
+Inactive:        1460000 kB
+Active(anon):    1161348 kB
+Inactive(anon):   276960 kB
+Active(file):     899360 kB
+Inactive(file):  1183040 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1089924 kB
+Dirty:               140 kB
+Writeback:             0 kB
+AnonPages:       1369292 kB
+Mapped:          1616536 kB
+Shmem:            213772 kB
+KReclaimable:     218540 kB
+Slab:             664756 kB
+SReclaimable:     174224 kB
+SUnreclaim:       490532 kB
+KernelStack:      127308 kB
+ShadowCallStack:   31880 kB
+PageTables:       258132 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500075752 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      272516 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:            4816 kB
+Gpu:              325020 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             561600 kB
+Misc:             111684 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435253450 Realtime: 1030538157
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   114569   113472     1092    12116   116344   159772   144197    11275
+  Dalvik Heap    11290     8548     2576       13    15252   262144     7761   254383
+ Dalvik Other     1790     1348      268       64     2644                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26049      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack    56936    56936        0        0    56936                           
+      Unknown     1044      412      600      106     1800                           
+        TOTAL   304539   247472    30648    12878   427176   421916   151958   265658
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:    10220                          36264
+         Native Heap:   113472                         116344
+                Code:    15548                         134016
+               Stack:     1632                           1728
+            Graphics:   121512                         121512
+       Private Other:    15736
+              System:    26419
+             Unknown:                                   17312
+ 
+           TOTAL PSS:   304539            TOTAL RSS:   427176       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:      100
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:04:16.820+08:00 scheduled=190s actual=190.001s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          801152 kB
+MemAvailable:    2470776 kB
+Buffers:            1004 kB
+Cached:          2575964 kB
+SwapCached:        17576 kB
+Active:          2033936 kB
+Inactive:        1459956 kB
+Active(anon):    1143004 kB
+Inactive(anon):   276932 kB
+Active(file):     890932 kB
+Inactive(file):  1183024 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1068472 kB
+Dirty:               232 kB
+Writeback:             0 kB
+AnonPages:       1350500 kB
+Mapped:          1607528 kB
+Shmem:            213664 kB
+KReclaimable:     218556 kB
+Slab:             664804 kB
+SReclaimable:     174240 kB
+SUnreclaim:       490564 kB
+KernelStack:      127308 kB
+ShadowCallStack:   31868 kB
+PageTables:       258124 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500077276 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      272572 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:           23488 kB
+Gpu:              325020 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             561428 kB
+Misc:             113104 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435263554 Realtime: 1030548262
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   115221   114124     1092    12116   116996   168964   153020    11643
+  Dalvik Heap    11014     8272     2576       13    14976   262144     7793   254351
+ Dalvik Other     1790     1348      268       64     2644                           
+        Stack     1744     1652       92      280     1748                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26049      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   110884   110884        0        0   110884                           
+      Unknown     1044      404      608      106     1800                           
+        TOTAL   358883   301808    30656    12878   481520   431108   160813   265994
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9944                          35988
+         Native Heap:   114124                         116996
+                Code:    15548                         134016
+               Stack:     1652                           1748
+            Graphics:   175460                         175460
+       Private Other:    15736
+              System:    26419
+             Unknown:                                   17312
+ 
+           TOTAL PSS:   358883            TOTAL RSS:   481520       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:       98
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:04:26.741+08:00 scheduled=200s actual=200.002s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          752780 kB
+MemAvailable:    2442284 kB
+Buffers:            1004 kB
+Cached:          2595264 kB
+SwapCached:        17564 kB
+Active:          2083344 kB
+Inactive:        1460448 kB
+Active(anon):    1173128 kB
+Inactive(anon):   276932 kB
+Active(file):     910216 kB
+Inactive(file):  1183516 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1103032 kB
+Dirty:               452 kB
+Writeback:             0 kB
+AnonPages:       1381000 kB
+Mapped:          1626220 kB
+Shmem:            213880 kB
+KReclaimable:     218764 kB
+Slab:             665028 kB
+SReclaimable:     174448 kB
+SUnreclaim:       490580 kB
+KernelStack:      127292 kB
+ShadowCallStack:   31848 kB
+PageTables:       257852 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500084208 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      272644 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:               0 kB
+Gpu:              325020 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             560056 kB
+Misc:             112924 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435273462 Realtime: 1030558170
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   114713   113616     1092    12116   116488   168964   153398    11266
+  Dalvik Heap    10010     7268     2576       13    13972   262144     7697   254447
+ Dalvik Other     1786     1344      268       64     2640                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26048      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   110884   110884        0        0   110884                           
+      Unknown     1044      404      608      106     1800                           
+        TOTAL   357346   300272    30656    12878   479984   431108   161095   265713
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     8940                          34984
+         Native Heap:   113616                         116488
+                Code:    15548                         134016
+               Stack:     1632                           1728
+            Graphics:   175460                         175460
+       Private Other:    15732
+              System:    26418
+             Unknown:                                   17308
+ 
+           TOTAL PSS:   357346            TOTAL RSS:   479984       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:      100
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:04:36.966+08:00 scheduled=210s actual=210.006s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          807580 kB
+MemAvailable:    2478592 kB
+Buffers:            1004 kB
+Cached:          2576916 kB
+SwapCached:        17580 kB
+Active:          2030552 kB
+Inactive:        1460220 kB
+Active(anon):    1138624 kB
+Inactive(anon):   276924 kB
+Active(file):     891928 kB
+Inactive(file):  1183296 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1065348 kB
+Dirty:               508 kB
+Writeback:             0 kB
+AnonPages:       1346424 kB
+Mapped:          1607976 kB
+Shmem:            213548 kB
+KReclaimable:     218796 kB
+Slab:             665040 kB
+SReclaimable:     174480 kB
+SUnreclaim:       490560 kB
+KernelStack:      127196 kB
+ShadowCallStack:   31832 kB
+PageTables:       258100 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500083936 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      272556 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:           23868 kB
+Gpu:              325020 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             561084 kB
+Misc:             109944 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435283653 Realtime: 1030568361
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   114713   113616     1092    12116   116488   168964   153394    11270
+  Dalvik Heap    10102     7360     2576       13    14064   262144     7729   254415
+ Dalvik Other     1778     1336      268       64     2632                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26048      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   110884   110884        0        0   110884                           
+      Unknown     1044      412      600      106     1800                           
+        TOTAL   357430   300364    30648    12878   480068   431108   161123   265685
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9032                          35076
+         Native Heap:   113616                         116488
+                Code:    15548                         134016
+               Stack:     1632                           1728
+            Graphics:   175460                         175460
+       Private Other:    15724
+              System:    26418
+             Unknown:                                   17300
+ 
+           TOTAL PSS:   357430            TOTAL RSS:   480068       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:      100
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:04:46.741+08:00 scheduled=220s actual=220.008s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          771596 kB
+MemAvailable:    2450824 kB
+Buffers:            1004 kB
+Cached:          2584832 kB
+SwapCached:        17568 kB
+Active:          2064972 kB
+Inactive:        1460676 kB
+Active(anon):    1165272 kB
+Inactive(anon):   276920 kB
+Active(file):     899700 kB
+Inactive(file):  1183756 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1090180 kB
+Dirty:               384 kB
+Writeback:             0 kB
+AnonPages:       1373828 kB
+Mapped:          1615076 kB
+Shmem:            213664 kB
+KReclaimable:     218764 kB
+Slab:             664992 kB
+SReclaimable:     174448 kB
+SUnreclaim:       490544 kB
+KernelStack:      127072 kB
+ShadowCallStack:   31812 kB
+PageTables:       257792 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500083952 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      272448 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:             280 kB
+Gpu:              325020 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             560244 kB
+Misc:             112356 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435293466 Realtime: 1030578174
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   114717   113620     1092    12116   116492   168964   153414    11250
+  Dalvik Heap    10094     7352     2576       13    14056   262144     7793   254351
+ Dalvik Other     1778     1336      268       64     2632                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26048      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   110628   110628        0        0   110628                           
+      Unknown     1044      404      608      106     1800                           
+        TOTAL   357170   300096    30656    12878   479808   431108   161207   265601
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9024                          35068
+         Native Heap:   113620                         116492
+                Code:    15548                         134016
+               Stack:     1632                           1728
+            Graphics:   175204                         175204
+       Private Other:    15724
+              System:    26418
+             Unknown:                                   17300
+ 
+           TOTAL PSS:   357170            TOTAL RSS:   479808       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:      100
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:04:56.913+08:00 scheduled=230s actual=230.002s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          805372 kB
+MemAvailable:    2475536 kB
+Buffers:            1004 kB
+Cached:          2575176 kB
+SwapCached:        17572 kB
+Active:          2029520 kB
+Inactive:        1460660 kB
+Active(anon):    1138940 kB
+Inactive(anon):   276904 kB
+Active(file):     890580 kB
+Inactive(file):  1183756 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1062356 kB
+Dirty:               392 kB
+Writeback:             0 kB
+AnonPages:       1347088 kB
+Mapped:          1605116 kB
+Shmem:            213096 kB
+KReclaimable:     218876 kB
+Slab:             665040 kB
+SReclaimable:     174560 kB
+SUnreclaim:       490480 kB
+KernelStack:      127120 kB
+ShadowCallStack:   31816 kB
+PageTables:       258032 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500090052 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      272496 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:           22364 kB
+Gpu:              325020 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             561292 kB
+Misc:             112664 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435303585 Realtime: 1030588293
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   114725   113628     1092    12116   116500   163092   147489    11328
+  Dalvik Heap    10118     7376     2576       13    14080   262144     7697   254447
+ Dalvik Other     1778     1336      268       64     2632                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26049      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   110628   110628        0        0   110628                           
+      Unknown     1044      404      608      106     1800                           
+        TOTAL   357203   300128    30656    12878   479840   425236   155186   265775
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9048                          35092
+         Native Heap:   113628                         116500
+                Code:    15548                         134016
+               Stack:     1632                           1728
+            Graphics:   175204                         175204
+       Private Other:    15724
+              System:    26419
+             Unknown:                                   17300
+ 
+           TOTAL PSS:   357203            TOTAL RSS:   479840       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:       98
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:05:06.753+08:00 scheduled=240s actual=240.006s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          780320 kB
+MemAvailable:    2458836 kB
+Buffers:            1004 kB
+Cached:          2583756 kB
+SwapCached:        17568 kB
+Active:          2057876 kB
+Inactive:        1460932 kB
+Active(anon):    1159200 kB
+Inactive(anon):   276904 kB
+Active(file):     898676 kB
+Inactive(file):  1184028 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1091284 kB
+Dirty:               456 kB
+Writeback:             0 kB
+AnonPages:       1367400 kB
+Mapped:          1613480 kB
+Shmem:            213548 kB
+KReclaimable:     218844 kB
+Slab:             664940 kB
+SReclaimable:     174528 kB
+SUnreclaim:       490412 kB
+KernelStack:      127116 kB
+ShadowCallStack:   31812 kB
+PageTables:       257876 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500087044 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      272460 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:            6012 kB
+Gpu:              325020 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             560204 kB
+Misc:             110468 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435313453 Realtime: 1030598161
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   114729   113632     1092    12116   116504   168964   153410    11264
+  Dalvik Heap    10078     7336     2576       13    14040   262144     7697   254447
+ Dalvik Other     1778     1336      268       64     2632                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26048      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   110372   110372        0        0   110372                           
+      Unknown     1044      404      608      106     1800                           
+        TOTAL   356910   299836    30656    12878   479548   431108   161107   265711
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9008                          35052
+         Native Heap:   113632                         116504
+                Code:    15548                         134016
+               Stack:     1632                           1728
+            Graphics:   174948                         174948
+       Private Other:    15724
+              System:    26418
+             Unknown:                                   17300
+ 
+           TOTAL PSS:   356910            TOTAL RSS:   479548       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:      100
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:05:16.916+08:00 scheduled=250s actual=250.003s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          803572 kB
+MemAvailable:    2477920 kB
+Buffers:            1004 kB
+Cached:          2579996 kB
+SwapCached:        17584 kB
+Active:          2032912 kB
+Inactive:        1460876 kB
+Active(anon):    1138352 kB
+Inactive(anon):   276916 kB
+Active(file):     894560 kB
+Inactive(file):  1183960 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1068636 kB
+Dirty:               184 kB
+Writeback:             0 kB
+AnonPages:       1346828 kB
+Mapped:          1609416 kB
+Shmem:            213876 kB
+KReclaimable:     218876 kB
+Slab:             665156 kB
+SReclaimable:     174560 kB
+SUnreclaim:       490596 kB
+KernelStack:      127180 kB
+ShadowCallStack:   31820 kB
+PageTables:       258128 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500086384 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      272444 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:           21544 kB
+Gpu:              325020 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             560940 kB
+Misc:             111048 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435323582 Realtime: 1030608290
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   114729   113632     1092    12116   116504   168964   153425    11249
+  Dalvik Heap    10110     7368     2576       13    14072   262144     7793   254351
+ Dalvik Other     1778     1336      268       64     2632                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26048      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   110116   110116        0        0   110116                           
+      Unknown     1044      396      616      106     1800                           
+        TOTAL   356686   299604    30664    12878   479324   431108   161218   265600
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9040                          35084
+         Native Heap:   113632                         116504
+                Code:    15548                         134016
+               Stack:     1632                           1728
+            Graphics:   174692                         174692
+       Private Other:    15724
+              System:    26418
+             Unknown:                                   17300
+ 
+           TOTAL PSS:   356686            TOTAL RSS:   479324       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:       98
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:05:26.727+08:00 scheduled=260s actual=260.001s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          764464 kB
+MemAvailable:    2450164 kB
+Buffers:            1004 kB
+Cached:          2590632 kB
+SwapCached:        17576 kB
+Active:          2072156 kB
+Inactive:        1461228 kB
+Active(anon):    1166676 kB
+Inactive(anon):   276916 kB
+Active(file):     905480 kB
+Inactive(file):  1184312 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1095516 kB
+Dirty:               168 kB
+Writeback:             0 kB
+AnonPages:       1375596 kB
+Mapped:          1620576 kB
+Shmem:            213552 kB
+KReclaimable:     219036 kB
+Slab:             665372 kB
+SReclaimable:     174720 kB
+SUnreclaim:       490652 kB
+KernelStack:      127212 kB
+ShadowCallStack:   31824 kB
+PageTables:       258160 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500086540 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      272584 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:             136 kB
+Gpu:              325020 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             560116 kB
+Misc:             110996 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435333427 Realtime: 1030618135
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   114733   113636     1092    12116   116508   168964   153424    11249
+  Dalvik Heap    10070     7328     2576       13    14032   262144     7729   254415
+ Dalvik Other     1778     1336      268       64     2632                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26049      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   110116   110116        0        0   110116                           
+      Unknown     1044      396      616      106     1800                           
+        TOTAL   356651   299568    30664    12878   479288   431108   161153   265664
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9000                          35044
+         Native Heap:   113636                         116508
+                Code:    15548                         134016
+               Stack:     1632                           1728
+            Graphics:   174692                         174692
+       Private Other:    15724
+              System:    26419
+             Unknown:                                   17300
+ 
+           TOTAL PSS:   356651            TOTAL RSS:   479288       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:      100
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:05:36.973+08:00 scheduled=270s actual=270.001s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          777208 kB
+MemAvailable:    2458000 kB
+Buffers:            1004 kB
+Cached:          2585616 kB
+SwapCached:        17580 kB
+Active:          2058384 kB
+Inactive:        1461252 kB
+Active(anon):    1157828 kB
+Inactive(anon):   276916 kB
+Active(file):     900556 kB
+Inactive(file):  1184336 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1082736 kB
+Dirty:               140 kB
+Writeback:             0 kB
+AnonPages:       1366544 kB
+Mapped:          1615888 kB
+Shmem:            213436 kB
+KReclaimable:     219020 kB
+Slab:             665260 kB
+SReclaimable:     174704 kB
+SUnreclaim:       490556 kB
+KernelStack:      127088 kB
+ShadowCallStack:   31824 kB
+PageTables:       258064 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500087360 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      272500 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:            3128 kB
+Gpu:              325020 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             560268 kB
+Misc:             112140 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435343629 Realtime: 1030628337
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   114729   113636     1088    12116   116504   168964   153436    11237
+  Dalvik Heap    10106     7364     2576       13    14068   262144     7729   254415
+ Dalvik Other     1778     1336      268       64     2632                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26048      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   110116   110116        0        0   110116                           
+      Unknown     1044      404      608      106     1800                           
+        TOTAL   356682   299612    30652    12878   479320   431108   161165   265652
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9036                          35080
+         Native Heap:   113636                         116504
+                Code:    15548                         134016
+               Stack:     1632                           1728
+            Graphics:   174692                         174692
+       Private Other:    15720
+              System:    26418
+             Unknown:                                   17300
+ 
+           TOTAL PSS:   356682            TOTAL RSS:   479320       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:      100
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:05:46.811+08:00 scheduled=280s actual=280.004s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          763168 kB
+MemAvailable:    2446532 kB
+Buffers:            1004 kB
+Cached:          2588464 kB
+SwapCached:        17572 kB
+Active:          2075396 kB
+Inactive:        1461528 kB
+Active(anon):    1172568 kB
+Inactive(anon):   276900 kB
+Active(file):     902828 kB
+Inactive(file):  1184628 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1097072 kB
+Dirty:               156 kB
+Writeback:             0 kB
+AnonPages:       1381060 kB
+Mapped:          1618508 kB
+Shmem:            214000 kB
+KReclaimable:     219036 kB
+Slab:             665332 kB
+SReclaimable:     174720 kB
+SUnreclaim:       490612 kB
+KernelStack:      127120 kB
+ShadowCallStack:   31820 kB
+PageTables:       257836 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500090104 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      272428 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:               0 kB
+Gpu:              325020 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             560036 kB
+Misc:             109352 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435353457 Realtime: 1030638165
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   114725   113632     1088    12116   116500   168964   153446    11227
+  Dalvik Heap    10054     7312     2576       13    14016   262144     7793   254351
+ Dalvik Other     1778     1336      268       64     2632                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26049      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   110116   110116        0        0   110116                           
+      Unknown     1044      396      616      106     1800                           
+        TOTAL   356627   299548    30660    12878   479264   431108   161239   265578
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     8984                          35028
+         Native Heap:   113632                         116500
+                Code:    15548                         134016
+               Stack:     1632                           1728
+            Graphics:   174692                         174692
+       Private Other:    15720
+              System:    26419
+             Unknown:                                   17300
+ 
+           TOTAL PSS:   356627            TOTAL RSS:   479264       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:      100
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391
+
+===== 2026-10-20T16:05:56.986+08:00 scheduled=290s actual=290.009s =====
+__PIDS_BEFORE__
+5391
+__MEMINFO__
+MemTotal:        7647536 kB
+MemFree:          798628 kB
+MemAvailable:    2468512 kB
+Buffers:            1004 kB
+Cached:          2574656 kB
+SwapCached:        17584 kB
+Active:          2036456 kB
+Inactive:        1461504 kB
+Active(anon):    1147128 kB
+Inactive(anon):   276896 kB
+Active(file):     889328 kB
+Inactive(file):  1184608 kB
+Unevictable:      443092 kB
+Mlocked:          443092 kB
+SwapTotal:       3823764 kB
+SwapFree:        1067736 kB
+Dirty:                40 kB
+Writeback:             0 kB
+AnonPages:       1356240 kB
+Mapped:          1605832 kB
+Shmem:            213656 kB
+KReclaimable:     219116 kB
+Slab:             665320 kB
+SReclaimable:     174800 kB
+SUnreclaim:       490520 kB
+KernelStack:      127148 kB
+ShadowCallStack:   31868 kB
+PageTables:       258236 kB
+SecPageTables:       324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     7647532 kB
+Committed_AS:   500087108 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:      272512 kB
+VmallocChunk:          0 kB
+Percpu:            22976 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:        1011712 kB
+CmaFree:           12024 kB
+Gpu:              325020 kB
+ION_heap_pool:     44316 kB
+ION_heap:         647056 kB
+Zram:             561076 kB
+Misc:             111344 kB
+__APP_MEMINFO__
+Applications Memory Usage (in Kilobytes):
+Uptime: 435363670 Realtime: 1030648378
+
+** MEMINFO in pid 5391 [com.juphoon.rtc.room] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap   114729   113636     1088    12116   116504   168964   153428    11255
+  Dalvik Heap    10098     7356     2576       13    14060   262144     7825   254319
+ Dalvik Other     1778     1336      268       64     2632                           
+        Stack     1724     1632       92      280     1728                           
+       Ashmem       18        0        0        0      988                           
+    Other dev        8        0        8        0      376                           
+     .so mmap    26049      132    15196      278    76628                           
+    .jar mmap      791        0        0        0    40812                           
+    .apk mmap      366        0       76        0     1816                           
+    .ttf mmap      212        0      136        0      488                           
+    .dex mmap        4        0        0        0      732                           
+    .oat mmap      250        0        0        0    13188                           
+    .art mmap     2026      412     1260       21    21012                           
+   Other mmap    10008        4     9344        0    11856                           
+   EGL mtrack    64576    64576        0        0    64576                           
+    GL mtrack   109832   109832        0        0   109832                           
+      Unknown     1044      396      616      106     1800                           
+        TOTAL   356391   299312    30660    12878   479028   431108   161253   265574
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     9028                          35072
+         Native Heap:   113636                         116504
+                Code:    15548                         134016
+               Stack:     1632                           1728
+            Graphics:   174408                         174408
+       Private Other:    15720
+              System:    26419
+             Unknown:                                   17300
+ 
+           TOTAL PSS:   356391            TOTAL RSS:   479028       TOTAL SWAP PSS:    12878
+ 
+ Objects
+               Views:      156         ViewRootImpl:        3
+         AppContexts:       11           Activities:        3
+              Assets:       29        AssetManagers:        0
+       Local Binders:       51        Proxy Binders:      100
+       Parcel memory:       14         Parcel count:       60
+    Death Recipients:        3             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):     1020                             95
+ Other (nonmalloced):      173                            113
+   Bitmap (malloced):       72                           9679
+ 
+ Mapped Bitmaps
+                         Count                       Size(KB)
+                        ------                         ------
+              Mapped:        0                              0
+              Unique:        0                              0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+__PIDS_AFTER__
+5391

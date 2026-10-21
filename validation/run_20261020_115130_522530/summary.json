@@ -1,0 +1,63 @@
+{
+  "status": "complete",
+  "package": "com.juphoon.rtc.room",
+  "process_scope": "exact main process only; excludes :suffix processes",
+  "serial": "34061FDH2007C2",
+  "label": "development_smoke",
+  "started_at": "2026-10-20T11:51:30.980+08:00",
+  "finished_at": "2026-10-20T11:51:41.659+08:00",
+  "duration_seconds": 10,
+  "elapsed_seconds": 10.68,
+  "cpu_interval_seconds": 5,
+  "memory_interval_seconds": 10,
+  "expected_samples": {
+    "cpu": 2,
+    "memory": 1
+  },
+  "actual_samples": {
+    "cpu": 2,
+    "memory": 1
+  },
+  "formal_five_minute_run": false,
+  "max_lateness_seconds": 1.0,
+  "metrics": {
+    "app_cpu_percent": {
+      "label": "App CPU 使用率（整机）",
+      "mean": 7.5375309999999995,
+      "unit": "%",
+      "samples": 2
+    },
+    "app_memory_percent": {
+      "label": "App 内存使用率（PSS / MemTotal）",
+      "mean": 3.413714,
+      "unit": "%",
+      "samples": 1
+    },
+    "total_cpu_percent": {
+      "label": "总 CPU 使用率",
+      "mean": 42.9465125,
+      "unit": "%",
+      "samples": 2
+    },
+    "total_memory_percent": {
+      "label": "总内存使用率",
+      "mean": 68.32653,
+      "unit": "%",
+      "samples": 1
+    },
+    "app_cpu_one_core_percent": {
+      "label": "App CPU 使用率（单核口径）",
+      "mean": 58.443594000000004,
+      "unit": "%",
+      "samples": 2
+    },
+    "app_pss_mib": {
+      "label": "App PSS",
+      "mean": 254.946289,
+      "unit": "MiB",
+      "samples": 1
+    }
+  },
+  "errors": [],
+  "interrupted": false
+}

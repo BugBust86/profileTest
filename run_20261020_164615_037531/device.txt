@@ -1,0 +1,10 @@
+List of devices attached
+34061FDH2007C2         device usb:18874368X product:panther model:Pixel_7 device:panther transport_id:132
+
+
+===== 2026-10-20T16:46:15.152+08:00 device properties =====
+Model: Pixel 7
+Android: 17
+SDK: 37
+Fingerprint: google/panther/panther:17/CP2A.260705.006/15641320:user/release-keys
+CLK_TCK: 100

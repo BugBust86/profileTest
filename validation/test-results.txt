@@ -1,0 +1,13 @@
+test_cpu_core_normalization_and_iowait (test_collector.Calculations.test_cpu_core_normalization_and_iowait) ... ok
+test_memory_real_android_log_and_old_format (test_collector.Calculations.test_memory_real_android_log_and_old_format) ... ok
+test_parse_process_name_and_guest_ticks (test_collector.Calculations.test_parse_process_name_and_guest_ticks) ... ok
+test_sampling_window_and_pid_selection (test_collector.Calculations.test_sampling_window_and_pid_selection) ... ok
+test_timeout_preserves_partial_raw_output (test_collector.Calculations.test_timeout_preserves_partial_raw_output) ... ok
+test_complete_entrypoint_and_csv_summary_verifier (test_collector.EntryPoint.test_complete_entrypoint_and_csv_summary_verifier) ... ok
+test_failures_never_pass_as_valid_results (test_collector.EntryPoint.test_failures_never_pass_as_valid_results) ... ok
+test_termination_saves_partial_results (test_collector.EntryPoint.test_termination_saves_partial_results) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 24.688s
+
+OK
