@@ -5,6 +5,7 @@ import argparse
 import csv
 import datetime as dt
 import json
+import math
 import os
 from pathlib import Path
 import re
@@ -21,6 +22,8 @@ PACKAGE = "com.juphoon.rtc.room"
 CPU_PERIOD = 5
 MEMORY_PERIOD = 10
 MAX_LATENESS = 1.0
+CHARGE_COUNTER_PATH = "/sys/class/power_supply/battery/charge_counter"
+CHARGE_TIMEOUT = 4
 DEFAULT_OUTPUT = Path(__file__).resolve().parent
 
 
@@ -117,6 +120,79 @@ def parse_memory(text, expected_pid):
                 total_memory_percent=round((total - available) / total * 100, 6))
 
 
+def charge_script(stage):
+    if stage not in ("start", "end"):
+        raise ValueError("未知电荷量采样阶段")
+    return """set -eu
+printf '__STAGE__\\n'
+echo %s
+printf '__CHARGE_COUNTER__\\n'
+cat %s
+printf '__BATTERY_STATUS__\\n'
+cat /sys/class/power_supply/battery/status
+printf '__UPTIME__\\n'
+cat /proc/uptime
+""" % (stage, CHARGE_COUNTER_PATH)
+
+
+def parse_charge(text):
+    stage = section(text, "STAGE")
+    counter = section(text, "CHARGE_COUNTER")
+    status = section(text, "BATTERY_STATUS")
+    if stage not in ("start", "end") or not re.fullmatch(r"\d+", counter) or int(counter) <= 0:
+        raise CollectionError("电池 charge_counter 无效或采样阶段错误，不能用 0 代替")
+    try:
+        uptime = float(section(text, "UPTIME").split()[0])
+    except (ValueError, IndexError) as exc:
+        raise CollectionError("无法解析电荷量采样设备时间") from exc
+    if not math.isfinite(uptime) or uptime < 0 or not status:
+        raise CollectionError("电荷量采样时间或电池状态无效")
+    return dict(stage=stage, charge_counter_uah=int(counter),
+                charge_counter_mah=int(counter) / 1000,
+                battery_status=status, device_uptime_seconds=uptime)
+
+
+def read_charge(adb, out, stage):
+    requested_at = timestamp()
+    requested = time.monotonic()
+    raw = adb.shell(charge_script(stage), timeout=CHARGE_TIMEOUT,
+                    raw_path=out / "charge.log", heading="charge " + stage)
+    data = parse_charge(raw)
+    if data["stage"] != stage:
+        raise CollectionError("电荷量采样阶段不匹配")
+    row = dict(timestamp=requested_at, command_seconds=round(time.monotonic() - requested, 6), **data)
+    path = out / "charge_samples.csv"
+    new_file = not path.exists()
+    with path.open("a", newline="", encoding="utf-8-sig") as stream:
+        writer = csv.DictWriter(stream, fieldnames=list(row))
+        if new_file:
+            writer.writeheader()
+        writer.writerow(row)
+    return row
+
+
+def summarize_charge(samples):
+    start = next((row for row in samples if row["stage"] == "start"), None)
+    end = next((row for row in samples if row["stage"] == "end"), None)
+    errors = []
+    consumed = interval = None
+    if start is None or end is None:
+        errors.append("电荷量缺少起始或结束记录")
+    else:
+        consumed = start["charge_counter_uah"] - end["charge_counter_uah"]
+        interval = round(end["device_uptime_seconds"] - start["device_uptime_seconds"], 6)
+        if interval <= 0:
+            errors.append("电荷量起止观测时间无效")
+        if consumed < 0:
+            errors.append("结束电荷量高于起始值，可能充电或电量计校正；保留有符号差值，不可作为消耗量验收")
+    if any(row["battery_status"] != "Discharging" for row in samples):
+        errors.append("电荷量端点不是 Discharging（自然放电），不可作为消耗量验收")
+    return dict(source=CHARGE_COUNTER_PATH, raw_unit="uAh", unit="mAh",
+                start=start, end=end, consumed_uah=consumed,
+                consumed_mah=consumed / 1000 if consumed is not None else None,
+                interval_seconds=interval, valid=not errors), errors
+
+
 class Adb:
     def __init__(self, executable, stop):
         self.executable = executable
@@ -174,14 +250,13 @@ def select_device(adb, requested):
             devices[fields[0]] = (fields[1], any(x.startswith("usb:") for x in fields[2:]))
     if requested:
         if requested not in devices or devices[requested][0] != "device":
-            raise CollectionError("指定设备不可用，请检查 USB 调试授权：\n" + listing)
-        if not devices[requested][1]:
-            raise CollectionError("指定设备不是 USB 连接，请通过 USB 连接手机")
+            raise CollectionError("指定设备不可用，请检查 ADB 连接和调试授权：\n" + listing)
         return requested, listing
-    usb = [serial for serial, (state, wired) in devices.items() if state == "device" and wired]
-    if len(usb) != 1:
-        raise CollectionError("需要恰好一台已授权的 USB 设备；多设备请使用 --serial：\n" + listing)
-    return usb[0], listing
+    online = [serial for serial, (state, _) in devices.items()
+              if state == "device" and not serial.startswith("emulator-")]
+    if len(online) != 1:
+        raise CollectionError("需要恰好一台已授权的在线真机（USB 或无线）；多设备请使用 --serial：\n" + listing)
+    return online[0], listing
 
 
 def cpu_script(include_top):
@@ -220,7 +295,9 @@ def scheduled_offsets(duration, period, include_zero=False):
     return range(0 if include_zero else period, duration if include_zero else duration + 1, period)
 
 
-def write_summary(out, args, serial, rows, started, elapsed, errors, interrupted):
+def write_summary(out, args, serial, rows, started, elapsed, errors, interrupted, charge_samples):
+    battery_charge, charge_errors = summarize_charge(charge_samples)
+    errors.extend(charge_errors)
     expected = {"cpu": args.duration // CPU_PERIOD, "memory": args.duration // MEMORY_PERIOD}
     complete = (not errors and not interrupted and
                 all(len(rows[k]) == expected[k] for k in expected))
@@ -237,7 +314,7 @@ def write_summary(out, args, serial, rows, started, elapsed, errors, interrupted
         values = [row[key] for row in rows[source]]
         metrics[key] = {"label": label, "mean": statistics.mean(values) if values else None,
                         "unit": unit, "samples": len(values)}
-    result = dict(status="complete" if complete else "incomplete", package=PACKAGE,
+    result = dict(schema_version=2, status="complete" if complete else "incomplete", package=PACKAGE,
                   process_scope="exact main process only; excludes :suffix processes",
                   serial=serial, label=args.label, started_at=started, finished_at=timestamp(),
                   duration_seconds=args.duration, elapsed_seconds=round(elapsed, 3),
@@ -245,7 +322,7 @@ def write_summary(out, args, serial, rows, started, elapsed, errors, interrupted
                   expected_samples=expected, actual_samples={k: len(v) for k, v in rows.items()},
                   formal_five_minute_run=complete and args.duration == 300,
                   max_lateness_seconds=MAX_LATENESS, metrics=metrics, errors=errors,
-                  interrupted=interrupted)
+                  interrupted=interrupted, battery_charge=battery_charge)
     (out / "summary.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     lines = ["# 性能采集结果", "", "- 状态：" + ("完整" if complete else "不完整（不可作为验收结果）"),
              "- 正式 5 分钟测试：" + ("是" if result["formal_five_minute_run"] else "否"),
@@ -257,6 +334,16 @@ def write_summary(out, args, serial, rows, started, elapsed, errors, interrupted
     for metric in metrics.values():
         value = "N/A" if metric["mean"] is None else "%.4f %s" % (metric["mean"], metric["unit"])
         lines.append("| %s | %s | %d |" % (metric["label"], value, metric["samples"]))
+    start, end = battery_charge["start"], battery_charge["end"]
+    lines += ["", "## 电荷量（仅起止两次读取）", "",
+              "- 起始剩余电荷量：" + ("%.3f mAh（%d uAh）" % (start["charge_counter_mah"], start["charge_counter_uah"]) if start else "N/A"),
+              "- 结束剩余电荷量：" + ("%.3f mAh（%d uAh）" % (end["charge_counter_mah"], end["charge_counter_uah"]) if end else "N/A"),
+              "- 电荷量消耗（起始 − 结束）：" + ("%.3f mAh" % battery_charge["consumed_mah"] if battery_charge["consumed_mah"] is not None else "N/A"),
+              "- 电荷量实际观测间隔：" + ("%.3f 秒" % battery_charge["interval_seconds"] if battery_charge["interval_seconds"] is not None else "N/A"),
+              "- 起止读数有效：" + ("是" if battery_charge["valid"] else "否"),
+              "", "电荷量来自设备电量计估算，非电流积分；仅检查起止放电状态，不能证明中途未充电。",
+              "读数存在刷新间隔和量化误差，差值为 0 不代表没有耗电；应在同一设备、相同条件与时长下比较。",
+              "起始读数在 CPU/内存采样窗口前，结束读数在最后一次 CPU 命令完成后，实际观测间隔单独记录。"]
     lines += ["", "App CPU 整机口径为 0–100%；单核口径可超过 100%。",
               "App 内存使用 PSS，总内存使用 (MemTotal − MemAvailable) / MemTotal。",
               "仅统计名称恰好等于包名的主进程。原始 top 的 %CPU 不参与均值计算。"]
@@ -292,6 +379,7 @@ def collect(args):
     started = None
     epoch = None
     workers = []
+    charge_samples = []
     try:
         serial, listing = select_device(adb, args.serial)
         adb.serial = serial
@@ -309,6 +397,7 @@ echo CLK_TCK: $(getconf CLK_TCK)
         hz = int(hz_match.group(1))
         baseline = parse_cpu(adb.shell(cpu_script(False), timeout=4,
                                       raw_path=out / "cpu_baseline.log", heading="baseline"))
+        charge_samples.append(read_charge(adb, out, "start"))
         started = timestamp()
         epoch = time.monotonic()
         wall_epoch = time.time()
@@ -369,14 +458,24 @@ echo CLK_TCK: $(getconf CLK_TCK)
             if thread.ident:
                 thread.join()
         elapsed = time.monotonic() - epoch if epoch is not None else 0
-        result = write_summary(out, args, serial, rows, started, elapsed, errors, interrupted.is_set())
+        if charge_samples:
+            # A bounded final read also preserves partial consumption after Ctrl+C.
+            # Use a separate stop event because workers have already been cancelled.
+            final_adb = Adb(adb_path, threading.Event())
+            final_adb.serial = serial
+            try:
+                charge_samples.append(read_charge(final_adb, out, "end"))
+            except Exception as exc:
+                errors.append("charge end: " + str(exc))
+        result = write_summary(out, args, serial, rows, started, elapsed, errors,
+                               interrupted.is_set(), charge_samples)
     print((out / "summary.md").read_text(encoding="utf-8"), flush=True)
     return 130 if interrupted.is_set() else (0 if result["status"] == "complete" else 1)
 
 
 def main():
-    parser = argparse.ArgumentParser(description="采集 com.juphoon.rtc.room 主进程与整机 CPU/内存，默认 5 分钟。")
-    parser.add_argument("--serial", default=os.environ.get("ANDROID_SERIAL"), help="adb devices -l 中的 USB 设备序列号")
+    parser = argparse.ArgumentParser(description="采集 com.juphoon.rtc.room 主进程与整机 CPU/内存及起止电荷量，支持 USB/无线 ADB，默认 5 分钟。")
+    parser.add_argument("--serial", default=os.environ.get("ANDROID_SERIAL"), help="adb devices -l 中的设备标识，支持 USB、无线调试名称或 IP:端口")
     parser.add_argument("--label", default="", help="测试场景，例如 720p_SR_on")
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT, help="结果父目录，默认脚本所在目录")
     parser.add_argument("--duration", type=int, default=300, help="采集秒数，必须是 10 的正整数倍；正式测试使用默认 300")

@@ -1,0 +1,3 @@
+﻿timestamp,command_seconds,stage,charge_counter_uah,charge_counter_mah,battery_status,device_uptime_seconds
+2026-10-22T15:50:38.511+08:00,0.245152,start,2554000,2554.0,Discharging,1202534.98
+2026-10-22T15:55:39.552+08:00,0.231092,end,2442000,2442.0,Discharging,1202836.0

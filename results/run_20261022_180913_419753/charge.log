@@ -1,0 +1,20 @@
+
+===== 2026-10-22T18:09:13.994+08:00 charge start =====
+__STAGE__
+start
+__CHARGE_COUNTER__
+3698000
+__BATTERY_STATUS__
+Discharging
+__UPTIME__
+2297830.73 7325633.87
+
+===== 2026-10-22T18:14:15.057+08:00 charge end =====
+__STAGE__
+end
+__CHARGE_COUNTER__
+3626000
+__BATTERY_STATUS__
+Discharging
+__UPTIME__
+2298131.80 7326770.10

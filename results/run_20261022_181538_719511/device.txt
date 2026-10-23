@@ -1,0 +1,11 @@
+List of devices attached
+adb-34061FDH2007C2-aAckDr._adb-tls-connect._tcp device product:panther model:Pixel_7 device:panther transport_id:2183
+adb-3B657J01XCW00000-lAyaUW._adb-tls-connect._tcp device product:PLC110 model:PLC110 device:OP60EDL1 transport_id:2186
+
+
+===== 2026-10-22T18:15:38.907+08:00 device properties =====
+Model: PLC110
+Android: 16
+SDK: 36
+Fingerprint: OnePlus/PLC110/OP60EDL1:16/BP2A.250605.015/V.dff485_173d7fc_1705300:user/release-keys
+CLK_TCK: 100

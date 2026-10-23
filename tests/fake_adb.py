@@ -11,13 +11,25 @@ if args[:1] == ["-s"]:
 if args == ["devices", "-l"]:
     print("List of devices attached")
     if mode != "no_device":
-        print("FAKE\t%s usb:1 model:Fake" % ("unauthorized" if mode == "unauthorized" else "device"))
+        if mode == "wireless":
+            print("adb-FAKE._adb-tls-connect._tcp\tdevice product:fake model:Fake transport_id:1")
+        else:
+            print("FAKE\t%s usb:1 model:Fake" % ("unauthorized" if mode == "unauthorized" else "device"))
     if mode == "multiple_devices":
         print("OTHER\tdevice usb:2 model:Fake")
 elif args[:1] == ["shell"]:
     script = args[1]
     if "CLK_TCK:" in script:
         print("Model: Fake\nAndroid: Test\nSDK: 37\nCLK_TCK: 100")
+    elif "__CHARGE_COUNTER__" in script:
+        ending = "echo end" in script
+        if mode == "bad_charge" or (mode == "end_charge_failure" and ending):
+            print("cat: charge_counter: Permission denied", file=sys.stderr)
+            sys.exit(1)
+        print("__STAGE__\n" + ("end" if ending else "start"))
+        print("__CHARGE_COUNTER__\n" + ("1998000" if ending else "2000000"))
+        print("__BATTERY_STATUS__\nDischarging")
+        print("__UPTIME__\n%.2f 0" % time.monotonic())
     elif "__APP_MEMINFO__" in script:
         if mode == "disconnect":
             print("error: device offline", file=sys.stderr)

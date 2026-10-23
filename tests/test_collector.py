@@ -8,6 +8,7 @@ import tempfile
 import threading
 import time
 import unittest
+from unittest.mock import Mock
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -16,6 +17,47 @@ from verify_results import verify
 
 
 class Calculations(unittest.TestCase):
+    def test_charge_counter_parsing_and_signed_consumption(self):
+        raw = "__STAGE__\nstart\n__CHARGE_COUNTER__\n2362000\n__BATTERY_STATUS__\nDischarging\n__UPTIME__\n100.25 99\n"
+        start = c.parse_charge(raw)
+        self.assertEqual(start["charge_counter_mah"], 2362)
+        end = dict(start, stage="end", charge_counter_uah=2350000,
+                   charge_counter_mah=2350, device_uptime_seconds=400.75)
+        charge, errors = c.summarize_charge([start, end])
+        self.assertEqual(errors, [])
+        self.assertEqual(charge["consumed_mah"], 12)
+        self.assertEqual(charge["interval_seconds"], 300.5)
+        for broken in (raw.replace("2362000", "0"), raw.replace("2362000", "-1"),
+                       raw.replace("2362000", "unavailable"), raw.replace("100.25", "nan")):
+            with self.subTest(raw=broken), self.assertRaises(c.CollectionError):
+                c.parse_charge(broken)
+        charge, errors = c.summarize_charge([start])
+        self.assertFalse(charge["valid"])
+        self.assertIsNone(charge["consumed_mah"])
+        charging = dict(end, battery_status="Charging")
+        self.assertFalse(c.summarize_charge([start, charging])[0]["valid"])
+        increased = dict(end, charge_counter_uah=2363000, charge_counter_mah=2363)
+        charge, errors = c.summarize_charge([start, increased])
+        self.assertFalse(charge["valid"])
+        self.assertEqual(charge["consumed_mah"], -1)  # never abs() or clamp to zero
+        self.assertEqual(c.summarize_charge([start, dict(end, charge_counter_uah=2362000)])[0]["consumed_mah"], 0)
+
+    def test_device_selection_supports_wireless_and_requires_explicit_multi_device(self):
+        adb = Mock()
+        wireless = "adb-FAKE._adb-tls-connect._tcp"
+        adb.run.return_value = "List of devices attached\n%s device model:Fake\nemulator-5554 device model:Emulator\n" % wireless
+        self.assertEqual(c.select_device(adb, None)[0], wireless)
+        adb.run.return_value += "USB device usb:1 model:Fake\n"
+        with self.assertRaisesRegex(c.CollectionError, "--serial"):
+            c.select_device(adb, None)
+        self.assertEqual(c.select_device(adb, wireless)[0], wireless)
+        adb.run.return_value = "192.168.1.2:5555 device model:Fake\n"
+        self.assertEqual(c.select_device(adb, "192.168.1.2:5555")[0], "192.168.1.2:5555")
+        for state in ("offline", "unauthorized"):
+            adb.run.return_value = "%s %s\n" % (wireless, state)
+            with self.subTest(state=state), self.assertRaises(c.CollectionError):
+                c.select_device(adb, wireless)
+
     def test_cpu_core_normalization_and_iowait(self):
         # 8 cores * 100 ticks * 5s; app used 1 full core, 40% system busy.
         old = dict(pid=123, start_ticks=10, app_ticks=0, total_ticks=0, idle_ticks=0, uptime=10)
@@ -94,6 +136,11 @@ class EntryPoint(unittest.TestCase):
             out = next(Path(folder).glob("run_*"))
             summary = verify(out, allow_short=True)
             self.assertEqual(summary["label"], "720p SR on")
+            self.assertEqual(summary["schema_version"], 2)
+            self.assertEqual(summary["battery_charge"]["consumed_uah"], 2000)
+            self.assertEqual(summary["battery_charge"]["consumed_mah"], 2)
+            self.assertEqual((out / "charge.log").read_text().count("===== "), 2)
+            self.assertIn("2000.000 mAh", (out / "summary.md").read_text())
             for key, expected in (("app_cpu_percent", 12.5), ("app_cpu_one_core_percent", 100),
                                   ("total_cpu_percent", 50), ("app_memory_percent", 10),
                                   ("total_memory_percent", 60)):
@@ -105,9 +152,50 @@ class EntryPoint(unittest.TestCase):
             (out / "summary.json").write_text(json.dumps(summary))
             with self.assertRaisesRegex(ValueError, "平均值"):
                 verify(out, allow_short=True)
+            summary["metrics"]["app_cpu_percent"]["mean"] = 12.5
+            summary["battery_charge"]["consumed_mah"] = 999
+            (out / "summary.json").write_text(json.dumps(summary))
+            with self.assertRaisesRegex(ValueError, "电荷量消耗"):
+                verify(out, allow_short=True)
+            summary["battery_charge"]["consumed_mah"] = 2
+            (out / "summary.json").write_text(json.dumps(summary))
+            raw = (out / "charge.log").read_text()
+            (out / "charge.log").write_text(raw.replace("1998000", "1997000"))
+            with self.assertRaisesRegex(ValueError, "原始日志与 CSV"):
+                verify(out, allow_short=True)
+            (out / "charge.log").write_text(raw)
+            charge_csv = out / "charge_samples.csv"
+            lines = charge_csv.read_text(encoding="utf-8-sig").splitlines()
+            charge_csv.write_text("\n".join(lines[:2]) + "\n", encoding="utf-8-sig")
+            with self.assertRaisesRegex(ValueError, "恰好"):
+                verify(out, allow_short=True)
+            # Legacy CPU/memory-only results still pass without new charge files.
+            del summary["schema_version"], summary["battery_charge"]
+            (out / "summary.json").write_text(json.dumps(summary))
+            verify(out, allow_short=True)
+
+    def test_wireless_entrypoint(self):
+        with tempfile.TemporaryDirectory() as folder:
+            result = self.run_entry("wireless", folder)
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            summary = verify(next(Path(folder).glob("run_*")), allow_short=True)
+            self.assertEqual(summary["serial"], "adb-FAKE._adb-tls-connect._tcp")
+            self.assertEqual(summary["battery_charge"]["consumed_mah"], 2)
+
+    def test_final_charge_failure_preserves_cpu_and_memory(self):
+        with tempfile.TemporaryDirectory() as folder:
+            result = self.run_entry("end_charge_failure", folder)
+            self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+            out = next(Path(folder).glob("run_*"))
+            summary = json.loads((out / "summary.json").read_text())
+            self.assertEqual(summary["actual_samples"], {"cpu": 2, "memory": 1})
+            self.assertEqual(summary["status"], "incomplete")
+            self.assertIsNone(summary["battery_charge"]["end"])
+            self.assertIsNone(summary["battery_charge"]["consumed_mah"])
+            self.assertIn("Permission denied", (out / "charge.log").read_text())
 
     def test_failures_never_pass_as_valid_results(self):
-        for mode in ("no_device", "unauthorized", "multiple_devices", "disconnect", "bad_memory", "restart", "timeout"):
+        for mode in ("no_device", "unauthorized", "multiple_devices", "disconnect", "bad_memory", "restart", "timeout", "bad_charge"):
             with self.subTest(mode=mode), tempfile.TemporaryDirectory() as folder:
                 result = self.run_entry(mode, folder)
                 self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
@@ -141,6 +229,8 @@ class EntryPoint(unittest.TestCase):
                 self.assertEqual(summary["status"], "incomplete")
                 self.assertTrue(summary["interrupted"])
                 self.assertEqual(summary["actual_samples"]["memory"], 1)
+                self.assertIsNotNone(summary["battery_charge"]["end"])
+                self.assertEqual(summary["battery_charge"]["consumed_mah"], 2)
             finally:
                 if process.poll() is None:
                     process.kill()

@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "status": "complete",
+  "package": "com.juphoon.rtc.room",
+  "process_scope": "exact main process only; excludes :suffix processes",
+  "serial": "adb-3B657J01XCW00000-lAyaUW._adb-tls-connect._tcp",
+  "label": "一加Ace5至尊版_120p_SR_off",
+  "started_at": "2026-10-22T17:52:52.920+08:00",
+  "finished_at": "2026-10-22T17:57:53.886+08:00",
+  "duration_seconds": 300,
+  "elapsed_seconds": 300.76,
+  "cpu_interval_seconds": 5,
+  "memory_interval_seconds": 10,
+  "expected_samples": {
+    "cpu": 60,
+    "memory": 30
+  },
+  "actual_samples": {
+    "cpu": 60,
+    "memory": 30
+  },
+  "formal_five_minute_run": true,
+  "max_lateness_seconds": 1.0,
+  "metrics": {
+    "app_cpu_percent": {
+      "label": "App CPU 使用率（整机）",
+      "mean": 9.750434316666666,
+      "unit": "%",
+      "samples": 60
+    },
+    "app_memory_percent": {
+      "label": "App 内存使用率（PSS / MemTotal）",
+      "mean": 1.7373855666666667,
+      "unit": "%",
+      "samples": 30
+    },
+    "total_cpu_percent": {
+      "label": "总 CPU 使用率",
+      "mean": 49.29111605,
+      "unit": "%",
+      "samples": 60
+    },
+    "total_memory_percent": {
+      "label": "总内存使用率",
+      "mean": 62.99635536666667,
+      "unit": "%",
+      "samples": 30
+    },
+    "app_cpu_one_core_percent": {
+      "label": "App CPU 使用率（单核口径）",
+      "mean": 72.93145281666666,
+      "unit": "%",
+      "samples": 60
+    },
+    "app_pss_mib": {
+      "label": "App PSS",
+      "mean": 267.27369783333336,
+      "unit": "MiB",
+      "samples": 30
+    }
+  },
+  "errors": [],
+  "interrupted": false,
+  "battery_charge": {
+    "source": "/sys/class/power_supply/battery/charge_counter",
+    "raw_unit": "uAh",
+    "unit": "mAh",
+    "start": {
+      "timestamp": "2026-10-22T17:52:52.734+08:00",
+      "command_seconds": 0.182829,
+      "stage": "start",
+      "charge_counter_uah": 3864000,
+      "charge_counter_mah": 3864.0,
+      "battery_status": "Discharging",
+      "device_uptime_seconds": 2296849.65
+    },
+    "end": {
+      "timestamp": "2026-10-22T17:57:53.670+08:00",
+      "command_seconds": 0.213145,
+      "stage": "end",
+      "charge_counter_uah": 3812000,
+      "charge_counter_mah": 3812.0,
+      "battery_status": "Discharging",
+      "device_uptime_seconds": 2297150.62
+    },
+    "consumed_uah": 52000,
+    "consumed_mah": 52.0,
+    "interval_seconds": 300.97,
+    "valid": true
+  }
+}
